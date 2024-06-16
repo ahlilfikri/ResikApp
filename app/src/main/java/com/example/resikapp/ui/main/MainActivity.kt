@@ -7,6 +7,7 @@ import android.widget.LinearLayout
 import androidx.appcompat.app.AppCompatActivity
 import com.example.resikapp.R
 import com.example.resikapp.ui.education.EducationActivity
+import com.example.resikapp.ui.pickupUser.PickupUserActivity
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -16,6 +17,11 @@ class MainActivity : AppCompatActivity() {
         val educationLayout: LinearLayout = findViewById(R.id.educationLayout)
         educationLayout.setOnClickListener {
             startActivity(Intent(this, EducationActivity::class.java))
+        }
+
+        val pickLayout: LinearLayout = findViewById(R.id.pickWasteLayout)
+        pickLayout.setOnClickListener {
+            startActivity(Intent(this, PickupUserActivity::class.java))
         }
     }
 }

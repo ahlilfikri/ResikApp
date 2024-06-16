@@ -10,7 +10,6 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 object ApiConfig {
     private const val BASE_URL = BuildConfig.BASE_URL
-    private const val AUTH_TOKEN = "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"
 
     fun getApiService(): ApiService {
         val loggingInterceptor = HttpLoggingInterceptor().apply {
@@ -20,7 +19,6 @@ object ApiConfig {
         val authInterceptor = Interceptor { chain ->
             val original = chain.request()
             val requestBuilder = original.newBuilder()
-                .header("Authorization", "token $AUTH_TOKEN")
             val request = requestBuilder.build()
             chain.proceed(request)
         }

@@ -1,7 +1,6 @@
-package com.example.resikapp.ui.education
+package com.example.resikapp.ui.pickupUser
 
 import android.content.Intent
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -11,17 +10,15 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.resikapp.R
 import com.example.resikapp.data.response.UserItem
+import com.example.resikapp.ui.education.DetailEducationActivity
+import com.example.resikapp.ui.education.EducationAdapter
 
-class EducationAdapter : RecyclerView.Adapter<EducationAdapter.ViewHolder>() {
-
+class HistoryAdapter : RecyclerView.Adapter<HistoryAdapter.ViewHolder>() {
     private val users = mutableListOf<UserItem>()
-
     fun setUsers(users: List<UserItem>) {
         this.users.clear()
         this.users.addAll(users)
         notifyDataSetChanged()
-        Log.d("ViewHolder", "User avatar URL: ${users}")
-
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -50,10 +47,6 @@ class EducationAdapter : RecyclerView.Adapter<EducationAdapter.ViewHolder>() {
         fun bind(user: UserItem) {
             nameTextView.text = user.login
             descriptionTextView.text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et est libero."
-
-            Log.d("ViewHolder", "Binding user: ${user.login}")
-            Log.d("ViewHolder", "User avatar URL: ${user.avatarUrl}")
-
             Glide.with(itemView.context)
                 .load(user.avatarUrl)
                 .into(avatarImageView)

@@ -15,12 +15,6 @@
         android:theme="@style/Theme.ResikApp"
         tools:targetApi="31">
         <activity
-            android:name=".ui.pickupUser.PickupUserActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ui.pickupUser.PickUpActivity"
-            android:exported="false" />
-        <activity
             android:name=".ui.main.MainActivity"
             android:exported="true">
             <intent-filter>
@@ -34,6 +28,9 @@
             android:exported="false" />
         <activity
             android:name=".ui.education.DetailEducationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.pickupUser.PickupUserActivity"
             android:exported="false" />
     </application>
 
