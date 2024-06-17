@@ -7,8 +7,12 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
+import com.example.resikapp.R
 import com.example.resikapp.databinding.FragmentHomeBinding
 import com.example.resikapp.ui.education.EducationActivity
+import com.example.resikapp.ui.homeui.recycling.RecyclingFragment
+import com.example.resikapp.ui.map.MapsActivity
 import com.example.resikapp.ui.pickupUser.PickupUserActivity
 
 class HomeFragment : Fragment() {
@@ -45,6 +49,12 @@ class HomeFragment : Fragment() {
         }
         binding.pickup.setOnClickListener{
             startActivity(Intent(activity,PickupUserActivity::class.java))
+        }
+        binding.recycling.setOnClickListener{
+            findNavController().navigate(R.id.action_navigation_home_to_navigation_recycling)
+        }
+        binding.map.setOnClickListener{
+            startActivity(Intent(activity, MapsActivity::class.java))
         }
     }
 

@@ -111,11 +111,13 @@
 
             </LinearLayout>
             <LinearLayout
-                android:id="@+id/r03tfniwsl2se"
+
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center_vertical"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:layout_marginBottom="16dp"
+                >
                 <LinearLayout
                     android:id="@+id/pickup"
                     android:layout_width="98dp"
@@ -201,6 +203,44 @@
                         />
                 </LinearLayout>
             </LinearLayout>
+            <LinearLayout
+            android:id="@+id/r03tfniwsl2se"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:id="@+id/map"
+                android:layout_width="98dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/layout_shape"
+                android:paddingVertical="16dp"
+                android:orientation="vertical">
+                <ImageView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginHorizontal="34dp"
+                    android:src="@mipmap/ic_launcher"
+                    android:scaleType="fitXY"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/location"
+                    android:textAlignment="center"
+                    android:textSize="12sp" />
+            </LinearLayout>
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                />
+
+        </LinearLayout>
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

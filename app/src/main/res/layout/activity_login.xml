@@ -25,7 +25,7 @@
                 android:layout_width="99dp"
                 android:layout_height="115dp"
                 android:layout_gravity="center"
-                android:src="@drawable/apk_logo"
+                android:src="@mipmap/ic_launcher"
                 android:scaleType="fitXY"/>
 
             <LinearLayout
