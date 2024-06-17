@@ -56,6 +56,9 @@ class HomeFragment : Fragment() {
         binding.map.setOnClickListener{
             startActivity(Intent(activity, MapsActivity::class.java))
         }
+        binding.recyclingButton.setOnClickListener{
+            findNavController().navigate(R.id.action_navigation_home_to_navigation_recycling)
+        }
     }
 
     override fun onDestroyView() {

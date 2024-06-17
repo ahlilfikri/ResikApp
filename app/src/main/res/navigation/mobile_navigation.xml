@@ -29,7 +29,7 @@
         android:id="@+id/navigation_notifications"
         android:name="com.example.resikapp.ui.homeui.setting.SettingFragment"
         android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_notifications" />
+        tools:layout="@layout/fragment_setting" />
     <fragment
         android:id="@+id/resultFragment"
         android:name="com.example.resikapp.ui.homeui.recycling.ResultFragment"

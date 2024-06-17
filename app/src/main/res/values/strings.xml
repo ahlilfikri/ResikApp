@@ -14,7 +14,7 @@
     <string name="title_activity_main">MainActivity</string>
     <string name="how_can_you_nrecycle_your_remaining_waste">How can you\nRecycle your remaining waste</string>
     <string name="with_you_we_will_help_ecology">With you we will help ecology</string>
-    <string name="my_waste_pick_up">My Waste pick up</string>
+    <string name="my_waste_pick_up">Recycle Your Wasted</string>
     <string name="pick_up">Pickup</string>
     <string name="education">Education</string>
     <string name="request_for_pick_up">Request for pick up</string>
@@ -27,4 +27,6 @@
     <string name="result">hasil</string>
     <string name="location">location</string>
     <string name="title_activity_maps">MapsActivity</string>
+    <string name="name">Arnold Armando Suwuh</string>
+    <string name="more_services">More services</string>
 </resources>
