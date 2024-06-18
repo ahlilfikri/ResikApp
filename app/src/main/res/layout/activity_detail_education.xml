@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="#FFFFFF"
     android:padding="16dp">
 
     <TextView
@@ -13,7 +14,8 @@
         android:text="Education Detail"
         android:textSize="24sp"
         android:textStyle="bold"
-        android:paddingBottom="8dp"/>
+        android:paddingBottom="8dp"
+        android:fontFamily="@font/poppins_semibold"/>
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
@@ -34,14 +36,25 @@
         android:id="@+id/nameTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Lorem Ipsum"
         android:textStyle="bold"
-        android:paddingBottom="8dp"/>
+        android:paddingBottom="8dp"
+        android:textSize="24sp"
+        android:fontFamily="@font/poppins_semibold"/>
+
+    <TextView
+        android:id="@+id/writerTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:text="Writer"
+        android:textSize="20sp"
+        android:fontFamily="@font/poppins_semibold"/>
 
     <TextView
         android:id="@+id/descriptionTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et est libero."/>
+        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et est libero."
+        android:fontFamily="@font/poppins_medium"/>
 
 </LinearLayout>

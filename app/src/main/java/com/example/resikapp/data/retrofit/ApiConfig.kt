@@ -1,6 +1,5 @@
 package com.example.resikapp.data.retrofit
 
-
 import com.example.resikapp.BuildConfig
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient

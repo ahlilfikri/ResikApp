@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFFFF"
     android:orientation="vertical">
     <ProgressBar
         android:id="@+id/progressBar"
@@ -16,7 +17,8 @@
         android:text="Education"
         android:textSize="24sp"
         android:textStyle="bold"
-        android:padding="16dp"/>
+        android:padding="16dp"
+        android:fontFamily="@font/poppins_semibold"/>
 
     <TextView
         android:id="@+id/educationSubtitle"
@@ -24,7 +26,8 @@
         android:layout_height="wrap_content"
         android:text="We are here to help you understand and care more about waste"
         android:paddingStart="16dp"
-        android:paddingEnd="16dp"/>
+        android:paddingEnd="16dp"
+        android:fontFamily="@font/poppins_medium"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
