@@ -24,6 +24,5 @@ class LoginActivity : AppCompatActivity() {
             finishAffinity()
         }
         binding.tvDaftar.setOnClickListener { startActivity(Intent(this@LoginActivity,RegisterActivity::class.java)) }
-
     }
 }

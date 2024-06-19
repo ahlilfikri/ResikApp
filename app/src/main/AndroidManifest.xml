@@ -59,7 +59,7 @@
             android:name=".ui.education.EducationActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.education.DetailEducationActivity"
+            android:name=".ui.deatilEducation.DetailEducationActivity"
             android:exported="false" />
         <activity
             android:name=".ui.pickupUser.PickupUserActivity"

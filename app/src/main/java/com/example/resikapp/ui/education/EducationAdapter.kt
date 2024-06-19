@@ -1,5 +1,6 @@
 package com.example.resikapp.ui.education
 
+import com.example.resikapp.ui.deatilEducation.DetailEducationActivity
 import android.content.Intent
 import android.util.Log
 import android.view.LayoutInflater

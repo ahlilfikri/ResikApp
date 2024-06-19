@@ -3,7 +3,6 @@ package com.example.resikapp.ui.map
 import android.content.pm.PackageManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Toolbar
 import androidx.activity.enableEdgeToEdge
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.content.ContextCompat
@@ -95,6 +94,8 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
                 300
             )
         )
+        val initialLocation = LatLng(tourismPlace[0].latitude, tourismPlace[0].longitude)
+        mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(initialLocation, 8f))
     }
 
     private val requestPermissionLauncher =
