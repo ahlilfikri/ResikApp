@@ -38,7 +38,7 @@ class EducationActivity : AppCompatActivity() {
 
     private fun fetchEducationData() {
         showLoading(true)
-        val client = ApiConfig.getApiService().getArticles()
+        val client = ApiConfig.getApiService(this).getArticles()
 
         client.enqueue(object : Callback<ApiResponseEducation> {
 

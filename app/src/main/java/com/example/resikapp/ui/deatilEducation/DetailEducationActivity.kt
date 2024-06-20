@@ -44,7 +44,7 @@ class DetailEducationActivity : AppCompatActivity() {
 
     private fun fetchArticleDetails(id: String) {
         showLoading(true)
-        val client = ApiConfig.getApiService().getDetailArticle(id)
+        val client = ApiConfig.getApiService(this).getDetailArticle(id)
         client.enqueue(object : Callback<ApiResponseDetailEducation>  {
             override fun onResponse(call: Call<ApiResponseDetailEducation>, response: Response<ApiResponseDetailEducation>) {
                 showLoading(false)
