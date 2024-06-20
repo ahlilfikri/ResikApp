@@ -10,6 +10,7 @@ import com.example.resikapp.data.response.LoginRequest
 import com.example.resikapp.data.response.LoginResponse
 import com.example.resikapp.data.retrofit.ApiConfig
 import com.example.resikapp.databinding.ActivityLoginBinding
+import com.example.resikapp.helper.sharedpreferencetoken
 import com.example.resikapp.ui.homeui.HomeActivity
 import com.example.resikapp.ui.register.RegisterActivity
 import retrofit2.Call
@@ -18,13 +19,14 @@ import retrofit2.Response
 
 class LoginActivity : AppCompatActivity() {
     private lateinit var binding: ActivityLoginBinding
+    private lateinit var sharedpreferencetoken: sharedpreferencetoken
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
+        sharedpreferencetoken = sharedpreferencetoken(this)
         binding.btnLogin.setOnClickListener {
             val username = binding.edtUsername.text.toString()
             val password = binding.edtPassword.text.toString()
@@ -45,8 +47,9 @@ class LoginActivity : AppCompatActivity() {
                     val loginResponse = response.body()
                     if (loginResponse != null && loginResponse.status == "success") {
                         val token = loginResponse.data?.token
+
                         if (token != null) {
-                            saveToken(token)
+                            sharedpreferencetoken.saveToken(token)
                         }
                         startActivity(Intent(this@LoginActivity, HomeActivity::class.java))
                         finishAffinity()
@@ -64,10 +67,4 @@ class LoginActivity : AppCompatActivity() {
         })
     }
 
-    private fun saveToken(token: String) {
-        val sharedPreferences = getSharedPreferences("MyPrefs", MODE_PRIVATE)
-        val editor = sharedPreferences.edit()
-        editor.putString("token", token)
-        editor.apply()
-    }
 }
