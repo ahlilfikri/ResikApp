@@ -35,6 +35,7 @@ class LoginActivity : AppCompatActivity() {
             }
         }
         binding.tvDaftar.setOnClickListener { startActivity(Intent(this@LoginActivity, RegisterActivity::class.java)) }
+
     }
 
     private fun login(username: String, password: String) {

@@ -85,7 +85,7 @@
                     <ImageView
                         android:layout_width="40dp"
                         android:layout_height="40dp"
-                        android:src="@mipmap/ic_launcher"
+                        android:src="@drawable/recycle"
                         android:scaleType="fitXY"
                         />
                 </LinearLayout>
@@ -129,7 +129,7 @@
                         android:layout_height="30dp"
                         android:layout_marginBottom="10dp"
                         android:layout_marginHorizontal="34dp"
-                        android:src="@mipmap/ic_launcher"
+                        android:src="@drawable/ic_pikup"
                         android:scaleType="fitXY"
                         />
 
@@ -158,7 +158,7 @@
                         android:layout_height="30dp"
                         android:layout_marginBottom="10dp"
                         android:layout_marginHorizontal="34dp"
-                        android:src="@mipmap/ic_launcher"
+                        android:src="@drawable/ic_education"
                         android:scaleType="fitXY"
                         />
                     <TextView
@@ -182,12 +182,12 @@
                     android:paddingVertical="16dp"
                     android:orientation="vertical">
                     <ImageView
-                        android:id="@+id/rrct4gpp05v"
+
                         android:layout_width="match_parent"
                         android:layout_height="30dp"
                         android:layout_marginBottom="10dp"
                         android:layout_marginHorizontal="34dp"
-                        android:src="@mipmap/ic_launcher"
+                        android:src="@drawable/recycle"
                         android:scaleType="fitXY"
                         />
                     <TextView
@@ -220,7 +220,7 @@
                     android:layout_height="30dp"
                     android:layout_marginBottom="10dp"
                     android:layout_marginHorizontal="34dp"
-                    android:src="@mipmap/ic_launcher"
+                    android:src="@drawable/baseline_map_24"
                     android:scaleType="fitXY"
                     />
 

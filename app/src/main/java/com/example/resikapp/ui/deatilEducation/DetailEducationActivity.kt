@@ -1,4 +1,4 @@
-package com.example.resikapp.ui.education
+package com.example.resikapp.ui.deatilEducation
 
 import android.os.Bundle
 import android.util.Log
