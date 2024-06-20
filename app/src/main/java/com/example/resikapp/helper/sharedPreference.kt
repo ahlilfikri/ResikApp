@@ -9,9 +9,6 @@ class sharedpreferencetoken (context: Context) {
 
     fun saveToken(token : String, name : String, email : String ,role:String){
         editor.putString("token", token)
-        editor.putString("username", name)
-        editor.putString("email", email)
-        editor.putString("role",role)
         editor.apply()
     }
 
@@ -25,9 +22,6 @@ class sharedpreferencetoken (context: Context) {
 
     fun clearData(){
         editor.remove("token")
-        editor.remove("username")
-        editor.remove("email")
-        editor.remove("role")
         editor.apply()
     }
 }
