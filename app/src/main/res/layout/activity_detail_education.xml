@@ -17,6 +17,24 @@
         android:paddingBottom="8dp"
         android:fontFamily="@font/poppins_semibold"/>
 
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/errorTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Data tidak tersedia"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:padding="16dp"
+        android:visibility="gone"
+        android:textColor="#FF0000"/>
+
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -46,7 +64,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textStyle="bold"
-        android:text="Writer"
         android:textSize="20sp"
         android:fontFamily="@font/poppins_semibold"/>
 

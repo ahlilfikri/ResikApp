@@ -10,17 +10,16 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.resikapp.R
+import com.example.resikapp.data.response.ArticleItem
 import com.example.resikapp.data.response.UserItem
 
 class EducationAdapter : RecyclerView.Adapter<EducationAdapter.ViewHolder>() {
+    private val articles = mutableListOf<ArticleItem>()
 
-    private val users = mutableListOf<UserItem>()
-
-    fun setUsers(users: List<UserItem>) {
-        this.users.clear()
-        this.users.addAll(users)
+    fun setArticles(articles: List<ArticleItem>) {
+        this.articles.clear()
+        this.articles.addAll(articles)
         notifyDataSetChanged()
-        Log.d("ViewHolder", "User avatar URL: ${users}")
 
     }
 
@@ -30,33 +29,32 @@ class EducationAdapter : RecyclerView.Adapter<EducationAdapter.ViewHolder>() {
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val user = users[position]
-        holder.bind(user)
+        val article = articles[position]
+        holder.bind(article)
         holder.itemView.setOnClickListener {
             val context = holder.itemView.context
             val intent = Intent(context, DetailEducationActivity::class.java)
-            intent.putExtra("username", user.login)
+            intent.putExtra("id", article.id)
             context.startActivity(intent)
         }
     }
 
-    override fun getItemCount(): Int = users.size
+    override fun getItemCount(): Int = articles.size
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         private val avatarImageView: ImageView = itemView.findViewById(R.id.avatarImageView)
         private val nameTextView: TextView = itemView.findViewById(R.id.nameTextView)
         private val descriptionTextView: TextView = itemView.findViewById(R.id.descriptionTextView)
 
-        fun bind(user: UserItem) {
-            nameTextView.text = user.login
-            descriptionTextView.text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et est libero."
+        fun bind(article: ArticleItem) {
+            nameTextView.text = article.penulis
 
-            Log.d("ViewHolder", "Binding user: ${user.login}")
-            Log.d("ViewHolder", "User avatar URL: ${user.avatarUrl}")
+            descriptionTextView.text = article.judul
 
-            Glide.with(itemView.context)
-                .load(user.avatarUrl)
-                .into(avatarImageView)
+//            Glide.with(itemView.context)
+//                .load(article.avatarUrl)
+//                .into(avatarImageView)
         }
     }
+
 }
