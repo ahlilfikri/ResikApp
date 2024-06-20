@@ -8,7 +8,6 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.resikapp.R
 import com.example.resikapp.data.response.UserItem
-import com.example.resikapp.ui.education.DetailEducationActivity
 
 class OnComingAdapter : RecyclerView.Adapter<OnComingAdapter.ViewHolder>() {
     private val users = mutableListOf<UserItem>()

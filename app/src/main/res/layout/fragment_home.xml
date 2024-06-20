@@ -141,6 +141,31 @@
                         android:textAlignment="center"
                         android:textSize="12sp" />
                 </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/pickupWorker"
+                    android:layout_width="98dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/layout_shape"
+                    android:paddingVertical="16dp"
+                    android:orientation="vertical">
+                    <ImageView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginHorizontal="34dp"
+                        android:src="@drawable/ic_pikup"
+                        android:scaleType="fitXY"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="pickup 2"
+                        android:textAlignment="center"
+                        android:textSize="12sp" />
+                </LinearLayout>
                 <View
                     android:layout_width="0dp"
                     android:layout_height="0dp"
@@ -233,31 +258,7 @@
                     android:textSize="12sp" />
             </LinearLayout>
 
-                <LinearLayout
-                    android:id="@+id/pickupWorker"
-                    android:layout_width="98dp"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/layout_shape"
-                    android:paddingVertical="16dp"
-                    android:orientation="vertical">
-                    <ImageView
 
-                        android:layout_width="match_parent"
-                        android:layout_height="30dp"
-                        android:layout_marginBottom="10dp"
-                        android:layout_marginHorizontal="34dp"
-                        android:src="@mipmap/ic_launcher"
-                        android:scaleType="fitXY"
-                        />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:text="pickup 2"
-                        android:textAlignment="center"
-                        android:textSize="12sp" />
-                </LinearLayout>
             <View
                 android:layout_width="0dp"
                 android:layout_height="0dp"

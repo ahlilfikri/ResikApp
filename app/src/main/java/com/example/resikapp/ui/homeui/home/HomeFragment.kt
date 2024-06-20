@@ -1,5 +1,6 @@
 package com.example.resikapp.ui.homeui.home
 
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,6 +9,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
+import com.auth0.android.jwt.JWT
 import com.example.resikapp.R
 import com.example.resikapp.databinding.FragmentHomeBinding
 import com.example.resikapp.ui.education.EducationActivity
@@ -35,21 +37,35 @@ class HomeFragment : Fragment() {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-
         homeViewModel.text.observe(viewLifecycleOwner) {
         }
         return root
-
-
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        val sharedPreferences = requireActivity().getSharedPreferences("MyPrefs", Context.MODE_PRIVATE)
+        val token = sharedPreferences.getString("token", null)
+
+        if (token != null) {
+            val jwt = JWT(token)
+            val userType = jwt.getClaim("type").asString()
+
+            if (userType == "mitra") {
+                binding.pickupWorker.visibility = View.VISIBLE
+                binding.pickup.visibility = View.GONE
+            } else if (userType == "client") {
+                binding.pickup.visibility = View.VISIBLE
+                binding.pickupWorker.visibility = View.GONE
+            }
+        }
+
         binding.education.setOnClickListener{
-            startActivity(Intent(activity,EducationActivity::class.java))
+            startActivity(Intent(activity, EducationActivity::class.java))
         }
         binding.pickup.setOnClickListener{
-            startActivity(Intent(activity,PickupUserActivity::class.java))
+            startActivity(Intent(activity, PickupUserActivity::class.java))
         }
         binding.recycling.setOnClickListener{
             findNavController().navigate(R.id.action_navigation_home_to_navigation_recycling)
@@ -61,7 +77,7 @@ class HomeFragment : Fragment() {
             findNavController().navigate(R.id.action_navigation_home_to_navigation_recycling)
         }
         binding.pickupWorker.setOnClickListener{
-            startActivity(Intent(activity,PickUpWorkerActivity::class.java))
+            startActivity(Intent(activity, PickUpWorkerActivity::class.java))
         }
     }
 
@@ -69,5 +85,4 @@ class HomeFragment : Fragment() {
         super.onDestroyView()
         _binding = null
     }
-
 }

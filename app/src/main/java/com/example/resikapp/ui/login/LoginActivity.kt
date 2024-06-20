@@ -35,7 +35,6 @@ class LoginActivity : AppCompatActivity() {
             }
         }
         binding.tvDaftar.setOnClickListener { startActivity(Intent(this@LoginActivity, RegisterActivity::class.java)) }
-
     }
 
     private fun login(username: String, password: String) {
@@ -46,8 +45,9 @@ class LoginActivity : AppCompatActivity() {
                     val loginResponse = response.body()
                     if (loginResponse != null && loginResponse.status == "success") {
                         val token = loginResponse.data?.token
-                        // Simpan token ke SharedPreferences atau sesi lainnya
-                        // Lanjutkan ke HomeActivity
+                        if (token != null) {
+                            saveToken(token)
+                        }
                         startActivity(Intent(this@LoginActivity, HomeActivity::class.java))
                         finishAffinity()
                     } else {
@@ -62,5 +62,12 @@ class LoginActivity : AppCompatActivity() {
                 Toast.makeText(this@LoginActivity, "Error: ${t.message}", Toast.LENGTH_SHORT).show()
             }
         })
+    }
+
+    private fun saveToken(token: String) {
+        val sharedPreferences = getSharedPreferences("MyPrefs", MODE_PRIVATE)
+        val editor = sharedPreferences.edit()
+        editor.putString("token", token)
+        editor.apply()
     }
 }
