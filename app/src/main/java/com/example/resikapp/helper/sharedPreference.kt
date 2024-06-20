@@ -7,10 +7,11 @@ class sharedpreferencetoken (context: Context) {
     private val sharedpreference : SharedPreferences = context.getSharedPreferences("MY_PREF", Context.MODE_PRIVATE)
     private val editor : SharedPreferences.Editor = sharedpreference.edit()
 
-    fun saveToken(token : String, name : String, email : String){
+    fun saveToken(token : String, name : String, email : String ,role:String){
         editor.putString("token", token)
         editor.putString("username", name)
         editor.putString("email", email)
+        editor.putString("role",role)
         editor.apply()
     }
 
@@ -26,6 +27,7 @@ class sharedpreferencetoken (context: Context) {
         editor.remove("token")
         editor.remove("username")
         editor.remove("email")
+        editor.remove("role")
         editor.apply()
     }
 }
