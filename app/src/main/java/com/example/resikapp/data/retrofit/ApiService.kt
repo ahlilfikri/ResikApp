@@ -4,7 +4,9 @@ import com.example.resikapp.data.response.ApiResponseDetailEducation
 import com.example.resikapp.data.response.ApiResponseEducation
 import com.example.resikapp.data.response.LoginRequest
 import com.example.resikapp.data.response.LoginResponse
+import com.example.resikapp.data.response.User
 import com.example.resikapp.data.response.UserItem
+import com.example.resikapp.data.response.UserResponse
 import retrofit2.Call
 import retrofit2.http.Body
 import retrofit2.http.GET
@@ -29,6 +31,6 @@ interface ApiService {
     @GET("users/{username}/following")
     fun getFollowings(@Path("username") username: String): Call<List<UserItem>>
 
-    @GET("users/{username}")
-    fun detailUser(@Path("username") username: String): Call<UserItem>
+    @GET("users/{id}")
+    fun detailUser(@Path("id") id: String): Call<UserResponse>
 }
