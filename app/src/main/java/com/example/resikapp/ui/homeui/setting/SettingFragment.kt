@@ -33,6 +33,8 @@ class SettingFragment : Fragment() {
 
         }
         return root
+
+
     }
 
     override fun onDestroyView() {
