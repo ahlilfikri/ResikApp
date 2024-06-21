@@ -37,8 +37,8 @@ class SettingFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         sharedpreferencetoken = sharedpreferencetoken(requireActivity())
-        val sharedPreferences = requireActivity().getSharedPreferences("MyPrefs", Context.MODE_PRIVATE)
-        val token = sharedPreferences.getString("token", null)
+
+        val token = sharedpreferencetoken.getToken()
 
         val notificationsViewModel = ViewModelProvider(this)[SettingViewModel::class.java]
 

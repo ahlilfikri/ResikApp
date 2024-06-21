@@ -13,6 +13,7 @@ import androidx.navigation.fragment.findNavController
 import com.auth0.android.jwt.JWT
 import com.example.resikapp.R
 import com.example.resikapp.databinding.FragmentHomeBinding
+import com.example.resikapp.helper.sharedpreferencetoken
 import com.example.resikapp.ui.education.EducationActivity
 import com.example.resikapp.ui.map.MapsActivity
 import com.example.resikapp.ui.pickupWorker.PickUpWorkerActivity
@@ -22,6 +23,7 @@ class HomeFragment : Fragment() {
 
     private var _binding: FragmentHomeBinding? = null
 
+    private lateinit var sharedpreferencetoken: sharedpreferencetoken
 
     private val binding get() = _binding!!
 
@@ -44,8 +46,9 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val sharedPreferences = requireActivity().getSharedPreferences("MyPrefs", Context.MODE_PRIVATE)
-        val token = sharedPreferences.getString("token", null)
+        sharedpreferencetoken =sharedpreferencetoken(requireActivity())
+
+        val token = sharedpreferencetoken.getToken()
         Log.d("TOken", ": ${token}")
 
         if (token != null) {
