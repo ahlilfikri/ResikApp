@@ -17,11 +17,13 @@ import com.example.resikapp.data.response.ApiResponsePesanan
 import com.example.resikapp.data.response.CreatePesananRequest
 import com.example.resikapp.data.response.CreatePesananResponse
 import com.example.resikapp.data.retrofit.ApiConfig
+import com.example.resikapp.helper.sharedpreferencetoken
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
 class PickupUserActivity : AppCompatActivity() {
+    private lateinit var sharedpreferencetoken: sharedpreferencetoken
 
     private lateinit var addressEditText: EditText
     private lateinit var addPickupButton: Button
@@ -47,6 +49,7 @@ class PickupUserActivity : AppCompatActivity() {
         historyRecyclerView.adapter = historyAdapter
 
         fetchPesananData()
+        sharedpreferencetoken = sharedpreferencetoken(this)
 
         addPickupButton.setOnClickListener {
             val alamat = addressEditText.text.toString()
@@ -95,8 +98,7 @@ class PickupUserActivity : AppCompatActivity() {
                 if (response.isSuccessful) {
                     val pesanans = response.body()
                     if (pesanans != null && pesanans.data.pesanan != null) {
-                        val sharedPreferences = getSharedPreferences("MyPrefs", MODE_PRIVATE)
-                        val token = sharedPreferences.getString("token", null)
+                        val token = sharedpreferencetoken.getToken()
 
                         if (token != null) {
                             val jwt = JWT(token)
