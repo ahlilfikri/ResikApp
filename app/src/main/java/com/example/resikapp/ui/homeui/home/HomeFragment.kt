@@ -3,6 +3,7 @@ package com.example.resikapp.ui.homeui.home
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -46,10 +47,12 @@ class HomeFragment : Fragment() {
 
         val sharedPreferences = requireActivity().getSharedPreferences("MyPrefs", Context.MODE_PRIVATE)
         val token = sharedPreferences.getString("token", null)
+        Log.d("TOken", ": ${token}")
 
         if (token != null) {
             val jwt = JWT(token)
             val userType = jwt.getClaim("type").asString()
+            Log.d("TYPEUSER", "Decoded ID from JWT: $userType")
 
             if (userType == "mitra") {
                 binding.pickupWorker.visibility = View.VISIBLE
