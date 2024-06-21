@@ -3,6 +3,7 @@ package com.example.resikapp.data.retrofit
 import android.content.Context
 import android.util.Log
 import com.example.resikapp.BuildConfig
+import com.example.resikapp.helper.sharedpreferencetoken
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
@@ -11,7 +12,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 object ApiConfig {
     private const val BASE_URL = BuildConfig.BASE_URL
-
+    private lateinit var sharedpreferencetoken: sharedpreferencetoken
     fun getApiService(context: Context): ApiService {
         val loggingInterceptor = HttpLoggingInterceptor().apply {
             level = HttpLoggingInterceptor.Level.BODY
@@ -21,8 +22,8 @@ object ApiConfig {
             val original = chain.request()
             val requestBuilder = original.newBuilder()
 
-            val sharedPreferences = context.getSharedPreferences("MyPrefs", Context.MODE_PRIVATE)
-            val token = sharedPreferences.getString("token", null)
+            sharedpreferencetoken = sharedpreferencetoken(context)
+            val token = sharedpreferencetoken.getToken()
 
             if (token != null) {
                 Log.d("pesananhistory", "Bearer $token")

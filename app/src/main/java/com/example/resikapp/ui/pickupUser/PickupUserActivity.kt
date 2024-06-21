@@ -97,7 +97,7 @@ class PickupUserActivity : AppCompatActivity() {
                 showLoading(false)
                 if (response.isSuccessful) {
                     val pesanans = response.body()
-                    if (pesanans != null && pesanans.data.pesanan != null) {
+                    if (pesanans != null) {
                         val token = sharedpreferencetoken.getToken()
 
                         if (token != null) {
