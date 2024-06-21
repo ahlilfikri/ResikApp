@@ -42,6 +42,11 @@ class RecyclingFragment : Fragment() {
             startGallery()
         }
 
+        binding.analyzeButton.setOnClickListener {
+            binding.textView2.visibility = View.VISIBLE
+
+        }
+
     }
 
     private fun startGallery(){
