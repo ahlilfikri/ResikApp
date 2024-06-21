@@ -9,7 +9,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.auth0.android.jwt.JWT
-import com.example.resikapp.data.response.User
+import com.example.resikapp.data.response.UserItem
 import com.example.resikapp.databinding.FragmentSettingBinding
 
 class SettingFragment : Fragment() {
@@ -31,16 +31,18 @@ class SettingFragment : Fragment() {
 
         val sharedPreferences = requireActivity().getSharedPreferences("MyPrefs", Context.MODE_PRIVATE)
         val token = sharedPreferences.getString("token", null)
-        Log.d("com.example.resikapp.ui.homeui.setting.SettingFragment", "Token from SharedPreferences: $token")
 
         val notificationsViewModel = ViewModelProvider(this)[SettingViewModel::class.java]
 
         if (token != null) {
             val jwt = JWT(token)
-            val id = jwt.getClaim("id").asString()
-            Log.d("ID Dari JWT", "Decoded ID from JWT: $id")
+            val allClaims = jwt.claims
+            for ((key, value) in allClaims) {
+                Log.d("SettingFragment", "Claim: $key = ${value.asString()}")
+            }
+            val username = jwt.getClaim("username").asString()
 
-            id?.let {
+            username?.let {
                 notificationsViewModel.showUser(requireContext(), it)
             }
         }
@@ -61,7 +63,7 @@ class SettingFragment : Fragment() {
         _binding = null
     }
 
-    private fun setDetailUser(detailUser: User) {
+    private fun setDetailUser(detailUser: UserItem) {
         binding.tvEmail.text = detailUser.email
         binding.tvName.text = detailUser.username
     }

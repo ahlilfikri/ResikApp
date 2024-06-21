@@ -33,7 +33,6 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:fontFamily="@font/poppins_medium"
-            android:text="@string/name"
             android:textSize="18sp" />
 
 
@@ -43,7 +42,6 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="6dp"
             android:layout_marginBottom="26dp"
-            android:text="@string/gmail"
             android:textColor="#808080" />
 
 
