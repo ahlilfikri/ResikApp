@@ -95,12 +95,20 @@ data class ArticleItem(
     @field:SerializedName("isi")
     val isi: String,
 
+    @field:SerializedName("image")
+    val image: String,
+
 ) : Parcelable
 
 
 data class ApiResponsePesanan(
     val status: String,
     val data: DataPesanan
+)
+
+data class ApiResponsePesananOnComing(
+    val status: String,
+    val data: DataOnComing
 )
 
 data class ApiResponseDetailPesanan(
@@ -112,8 +120,12 @@ data class DataPesanan(
     val pesanan: List<HistoryPesananItem>
 )
 
+data class DataOnComing(
+    val listRequest : List<HistoryPesananItem>
+)
+
 data class DataDetailPesanan(
-    val pesanan: PesananItem
+    val pesanan: HistoryPesananItem
 )
 
 data class CreatePesananRequest(
@@ -137,7 +149,13 @@ data class PesananData(
     val pesananId: String
 )
 
+data class UpdatePesananRequest(
+    @field:SerializedName("berat")
+    val berat: String,
 
+    @field:SerializedName("harga")
+    val harga: String
+)
 @Parcelize
 data class HistoryPesananItem(
     @field:SerializedName("id")
@@ -162,24 +180,4 @@ data class HistoryPesananItem(
     val created: String,
 
     ) : Parcelable
-@Parcelize
-data class PesananItem(
-    @field:SerializedName("id")
-    val id: String,
 
-    @field:SerializedName("userId")
-    val user: String,
-
-    @field:SerializedName("alamat")
-    val alamat: String,
-
-    @field:SerializedName("harga")
-    val harga: String,
-
-    @field:SerializedName("berat")
-    val berat: String,
-
-    @field:SerializedName("idMitra")
-    val mitra: String,
-
-    ) : Parcelable

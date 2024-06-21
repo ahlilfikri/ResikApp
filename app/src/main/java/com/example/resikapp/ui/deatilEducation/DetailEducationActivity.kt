@@ -75,9 +75,9 @@ class DetailEducationActivity : AppCompatActivity() {
         nameTextView.text = article.judul
         writerTextView.text = article.penulis
         descriptionTextView.text = article.isi
-//        Glide.with(this)
-//            .load(user.avatarUrl)
-//            .into(avatarImageView)
+        Glide.with(this)
+            .load(article.image)
+            .into(avatarImageView)
     }
 
     private fun showLoading(isLoading: Boolean) {

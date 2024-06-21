@@ -32,7 +32,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="How can you"
+                android:text="@string/home1"
                 android:textSize="18sp"
                 android:textStyle="bold"
                 android:paddingBottom="4dp"/>
@@ -40,7 +40,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Recycle your remaining waste"
+                android:text="@string/home2"
                 android:textSize="18sp"
                 android:textStyle="bold"
                 android:paddingBottom="8dp"/>
@@ -48,7 +48,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="With you we will help ecology"
+                android:text="@string/home3"
                 android:textSize="14sp"
                 android:textColor="@android:color/darker_gray"
                 android:paddingBottom="16dp"/>
@@ -71,160 +71,12 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="My Waste pick up"
+                    android:text="@string/home1"
                     android:textSize="16sp"
                     android:textStyle="bold"
                     android:textColor="@android:color/black"/>
             </LinearLayout>
         </LinearLayout>
     </androidx.cardview.widget.CardView>
-
-    <!-- Existing More Services Section -->
-    <TextView
-        android:id="@+id/moreServicesTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="More services"
-        android:textStyle="bold"
-        android:layout_marginTop="16dp"/>
-
-    <TextView
-        android:id="@+id/seeMore"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="see more"
-        android:layout_gravity="end"
-        android:layout_marginTop="-24dp"
-        android:paddingEnd="16dp"
-        android:textColor="@android:color/darker_gray"/>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center"
-        android:layout_marginTop="16dp">
-
-        <LinearLayout
-            android:id="@+id/pickWasteLayout"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="vertical"
-            android:gravity="center"
-            android:padding="8dp"
-            android:layout_margin="8dp"
-            android:clickable="true"
-            android:focusable="true">
-
-            <ImageView
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:src="@drawable/ic_pikup"
-                android:tint="@android:color/black"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Pick waste"
-                android:layout_marginTop="8dp"/>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/educationLayout"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="vertical"
-            android:gravity="center"
-            android:padding="8dp"
-            android:layout_margin="8dp"
-            android:clickable="true"
-            android:focusable="true">
-
-            <ImageView
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:src="@drawable/ic_education"
-                android:tint="@android:color/black"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Education"
-                android:layout_marginTop="8dp"/>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/recyclingLayout"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:orientation="vertical"
-            android:gravity="center"
-            android:padding="8dp"
-            android:layout_margin="8dp"
-            android:clickable="true"
-            android:focusable="true">
-
-            <ImageView
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:src="@drawable/ic_recycling"
-                android:tint="@android:color/black"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Recycling"
-                android:layout_marginTop="8dp"/>
-
-        </LinearLayout>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="bottom"
-        android:layout_marginTop="10dp">
-
-        <TextView
-            android:id="@+id/navHome"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:padding="16dp"
-            android:text="Home"
-            android:textColor="@android:color/black"
-            android:drawablePadding="4dp"/>
-
-        <TextView
-            android:id="@+id/navSetting"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:padding="16dp"
-            android:text="Setting"
-            android:textColor="@android:color/black"
-            android:drawablePadding="4dp"/>
-
-        <TextView
-            android:id="@+id/navAccount"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:padding="16dp"
-            android:text="Account"
-            android:textColor="@android:color/black"
-            android:drawablePadding="4dp"/>
-
-    </LinearLayout>
 
 </LinearLayout>

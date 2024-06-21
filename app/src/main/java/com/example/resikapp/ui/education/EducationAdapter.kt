@@ -52,9 +52,9 @@ class EducationAdapter : RecyclerView.Adapter<EducationAdapter.ViewHolder>() {
 
             descriptionTextView.text = article.judul
 
-//            Glide.with(itemView.context)
-//                .load(article.avatarUrl)
-//                .into(avatarImageView)
+            Glide.with(itemView.context)
+                .load(article.image)
+                .into(avatarImageView)
         }
     }
 

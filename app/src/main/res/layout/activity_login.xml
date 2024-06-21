@@ -24,7 +24,7 @@
                 android:layout_width="99dp"
                 android:layout_height="115dp"
                 android:layout_gravity="center"
-                android:src="@mipmap/ic_launcher"
+                android:src="@drawable/logo"
                 android:scaleType="fitXY"/>
 
             <LinearLayout
@@ -40,10 +40,10 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="75dp"
+                    android:layout_marginStart="140dp"
                     android:layout_marginBottom="18dp"
                     android:fontFamily="@font/poppins_semibold"
-                    android:text="@string/register"
+                    android:text="@string/login"
                     android:textColor="#000000"
                     android:textSize="36sp" />
 
@@ -96,7 +96,7 @@
                         android:layout_width="25dp"
                         android:layout_height="25dp"
                         android:layout_marginEnd="16dp"
-                        android:src="@mipmap/ic_launcher"
+                        android:src="@drawable/pw_logo"
                         android:scaleType="fitXY"/>
 
                     <EditText

@@ -14,14 +14,5 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val educationLayout: LinearLayout = findViewById(R.id.educationLayout)
-        educationLayout.setOnClickListener {
-            startActivity(Intent(this, EducationActivity::class.java))
-        }
-
-        val pickLayout: LinearLayout = findViewById(R.id.pickWasteLayout)
-        pickLayout.setOnClickListener {
-            startActivity(Intent(this, PickupUserActivity::class.java))
-        }
     }
 }

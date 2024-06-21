@@ -13,9 +13,8 @@ import com.auth0.android.jwt.JWT
 import com.example.resikapp.R
 import com.example.resikapp.databinding.FragmentHomeBinding
 import com.example.resikapp.ui.education.EducationActivity
-import com.example.resikapp.ui.homeui.recycling.RecyclingFragment
 import com.example.resikapp.ui.map.MapsActivity
-import com.example.resikapp.ui.pickUpWorker.PickUpWorkerActivity
+import com.example.resikapp.ui.pickupWorker.PickUpWorkerActivity
 import com.example.resikapp.ui.pickupUser.PickupUserActivity
 
 class HomeFragment : Fragment() {

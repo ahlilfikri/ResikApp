@@ -31,7 +31,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="8dp"
-            android:text="Lorem Ipsum"
             android:textStyle="bold"
             android:fontFamily="@font/poppins_semibold"/>
 
@@ -40,7 +39,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="8dp"
-            android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed et est libero."
             android:fontFamily="@font/poppins_medium"/>
 
     </LinearLayout>

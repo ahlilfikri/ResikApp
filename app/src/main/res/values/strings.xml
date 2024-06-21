@@ -31,4 +31,25 @@
     <string name="more_services">More services</string>
     <string name="gmail">arnoldarmando07@gmail.com</string>
     <string name="gg">gg</string>
+    <string name="detailPesanan">Detail Pesanan</string>
+    <string name="pilihSatu">Silahkan pilih salah satu</string>
+    <string name="newPesanan">Pesanan Terbaru</string>
+    <string name="noPesanan">Belum Ada Pesanan</string>
+    <string name="dataUnavailable">Data tidak tersedia</string>
+    <string name="detailEducation">Education Detail</string>
+    <string name="titleEducation">Education</string>
+    <string name="subTitleEducation">We are here to help you understand and care more about waste</string>
+    <string name="home1">How can you</string>
+    <string name="home2">Recycle your remaining waste</string>
+    <string name="home3">With you we will help ecology</string>
+    <string name="addData">Tambah Data</string>
+    <string name="inputAdress">Masukkan Alamat</string>
+    <string name="addPikup">Tambah PickUp</string>
+    <string name="History">History</string>
+    <string name="noHistory">Belum Ada History</string>
+    <string name="inputName">Nama: </string>
+    <string name="inputAdr">Alamat: </string>
+    <string name="inputWeight">Berat</string>
+    <string name="inputPrice">Harga</string>
+    <string name="btnSave">Save</string>
 </resources>
