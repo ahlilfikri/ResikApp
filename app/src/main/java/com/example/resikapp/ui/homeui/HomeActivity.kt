@@ -17,7 +17,7 @@ class HomeActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
+
         binding = ActivityHomeBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
@@ -36,6 +36,8 @@ class HomeActivity : AppCompatActivity() {
         navView.setupWithNavController(navController)
 
     }
+
+
 
 
 }
