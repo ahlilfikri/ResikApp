@@ -22,7 +22,6 @@
     <string name="belum_punya_akun">Belum punya akun ?  </string>
     <string name="gallery">gallery</string>
     <string name="analyze">analyze</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="result">hasil</string>
     <string name="location">location</string>
@@ -31,7 +30,6 @@
     <string name="more_services">More services</string>
     <string name="gmail">arnoldarmando07@gmail.com</string>
     <string name="gg">gg</string>
-<<<<<<< HEAD
     <string name="detailPesanan">Detail Pesanan</string>
     <string name="pilihSatu">Silahkan pilih salah satu</string>
     <string name="newPesanan">Pesanan Terbaru</string>
@@ -53,8 +51,6 @@
     <string name="inputWeight">Berat</string>
     <string name="inputPrice">Harga</string>
     <string name="btnSave">Save</string>
-=======
     <string name="logout">logout</string>
     <string name="resikapp">ResikApp</string>
->>>>>>> 4495d8dd372142038e40b587be3dd186708b7bdc
 </resources>

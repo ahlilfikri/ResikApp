@@ -11,11 +11,8 @@ import com.example.resikapp.data.response.CreatePesananRequest
 import com.example.resikapp.data.response.CreatePesananResponse
 import com.example.resikapp.data.response.LoginRequest
 import com.example.resikapp.data.response.LoginResponse
-<<<<<<< HEAD
 import com.example.resikapp.data.response.UpdatePesananRequest
-=======
 import com.example.resikapp.data.response.User
->>>>>>> 4495d8dd372142038e40b587be3dd186708b7bdc
 import com.example.resikapp.data.response.UserItem
 import com.example.resikapp.data.response.UserResponse
 import retrofit2.Call
@@ -54,9 +51,7 @@ interface ApiService {
     fun updatePesanan(@Path("id") id: String, @Body request: UpdatePesananRequest): Call<CreatePesananResponse>
 
 
-<<<<<<< HEAD
-=======
+
     @GET("users/{id}")
     fun detailUser(@Path("id") id: String): Call<UserResponse>
->>>>>>> 4495d8dd372142038e40b587be3dd186708b7bdc
 }

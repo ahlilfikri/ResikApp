@@ -35,16 +35,15 @@ class SettingFragment : Fragment() {
 
         val notificationsViewModel = ViewModelProvider(this)[SettingViewModel::class.java]
 
-        if (token!= null){
+        if (token != null) {
             val jwt = JWT(token)
             val id = jwt.getClaim("id").asString()
             Log.d("ID Dari JWT", "Decoded ID from JWT: $id")
 
-            notificationsViewModel.showUser(id?:"gg")
+            id?.let {
+                notificationsViewModel.showUser(requireContext(), it)
+            }
         }
-
-
-
 
         notificationsViewModel.userDetail.observe(viewLifecycleOwner) {
             if (it != null) {
