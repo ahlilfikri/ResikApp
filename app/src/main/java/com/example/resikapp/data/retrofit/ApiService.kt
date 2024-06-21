@@ -1,8 +1,6 @@
 package com.example.resikapp.data.retrofit
 
 import com.example.resikapp.data.response.ApiResponseDetailEducation
-import com.example.resikapp.data.response.ApiResponseDetailPesanan
-import com.example.resikapp.data.response.ApiResponseDetailUser
 import com.example.resikapp.data.response.ApiResponseEducation
 import com.example.resikapp.data.response.ApiResponsePesanan
 import com.example.resikapp.data.response.ApiResponsePesananOnComing
@@ -12,8 +10,6 @@ import com.example.resikapp.data.response.CreatePesananResponse
 import com.example.resikapp.data.response.LoginRequest
 import com.example.resikapp.data.response.LoginResponse
 import com.example.resikapp.data.response.UpdatePesananRequest
-import com.example.resikapp.data.response.User
-import com.example.resikapp.data.response.UserItem
 import com.example.resikapp.data.response.UserResponse
 import retrofit2.Call
 import retrofit2.http.Body
@@ -25,12 +21,6 @@ import retrofit2.http.Path
 interface ApiService {
     @POST("login")
     fun login(@Body loginRequest: LoginRequest): Call<LoginResponse>
-
-    @GET("users")
-    fun getUsers(): Call<ApiResponseUser>
-
-    @GET("user/{id}")
-    fun getDetailUser(@Path("id") username: String): Call<ApiResponseDetailUser>
 
     @GET("articles")
     fun getArticles(): Call<ApiResponseEducation>
@@ -50,8 +40,9 @@ interface ApiService {
     @PUT("pesanan/{id}")
     fun updatePesanan(@Path("id") id: String, @Body request: UpdatePesananRequest): Call<CreatePesananResponse>
 
-
-
     @GET("users/{id}")
     fun detailUser(@Path("id") id: String): Call<UserResponse>
+
+    @GET("users")
+    fun getAllUsers(): Call<ApiResponseUser>
 }

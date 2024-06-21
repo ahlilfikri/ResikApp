@@ -54,17 +54,14 @@ class DetailEducationActivity : AppCompatActivity() {
                         bindArticleDetails(article.data.artikel)
                         showError(false)
                     } else {
-                        Log.d("detailarticle", "onFailure: ${article}")
                         showError(true)
                     }
                 } else {
-                    Log.d("detailarticle", "onFailure: ${response }")
                     showError(true)
                 }
             }
 
             override fun onFailure(call: Call<ApiResponseDetailEducation>, t: Throwable) {
-                Log.d("detailarticle", "onFailure: ${t}")
                 showLoading(false)
                 showError(true)
             }
