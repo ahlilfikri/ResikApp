@@ -9,6 +9,7 @@ Aplikasi ini dikembangkan sebagai **Capstone Project Bangkit Academy 2024 (Path 
 - 🚛 Order penjemputan sampah dengan mudah.
 - 📸 Scan sampah menggunakan kamera untuk mengenali jenis sampah (organik, anorganik, B3, dll).
 - 🤖 Model AI berbasis **Convolutional Neural Network (CNN)** untuk klasifikasi sampah.
+-  Fitur Edukasi Terkait Sampah
 - 👤 Manajemen akun pengguna.
 - 📊 Riwayat order & status penjemputan.
 
@@ -73,11 +74,16 @@ ResikApp/
 
 ![Scan](images/scan.png)
 
+### 📸 Edukasi
+
+![Scan](images/edukasi.png)
+
 ### 🚛 Order Penjemputan
 
 ![Order](images/order.png)
 
-> 📌 Simpan screenshot ke folder `images/` lalu ganti sesuai nama file.
+
+
 
 ---
 
