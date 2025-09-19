@@ -25,7 +25,9 @@ Aplikasi ini dikembangkan sebagai **Capstone Project Bangkit Academy 2024 (Path 
 
 ## 📂 Struktur Project (ringkas)
 
+````
 
+---
 ResikApp/
 ├── app/
 │   ├── java/com/resikapp/
@@ -62,25 +64,25 @@ ResikApp/
 
 ## 📸 Tampilan Aplikasi
 
-### 🔑 Login
+### 🔑 Fitur
 
-![Login](images/login.png)
+![Login](images/fitur.png)
 
-### 🏠 Dashboard
+### 🏠 Edukasi
 
-![Dashboard](images/dashboard.png)
+![Dashboard](images/education.png)
 
 ### 📸 Scan Sampah
 
-![Scan](images/scan.png)
+![Scan](clasifikasi/scan.png)
 
-### 📸 Edukasi
-
-![Scan](images/edukasi.png)
 
 ### 🚛 Order Penjemputan
 
-![Order](images/order.png)
+![Order](images/pickup-1.png)
+
+
+![Order2](images/pickup2.png)
 
 
 
