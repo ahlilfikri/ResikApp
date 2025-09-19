@@ -54,10 +54,10 @@ ResikApp/
    ```bash
    git clone https://github.com/ahlilfikri/ResikApp.git
 ````
-````
-````
 
----
+
+
+
 ---
 
 2. **Buka project di Android Studio**
