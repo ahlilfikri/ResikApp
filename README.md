@@ -1,8 +1,3 @@
-Mantap, project capstone Bangkit biasanya keren kalau dokumentasinya rapi ✨. Saya buatin draft **README.md lengkap** untuk **ResikApp** biar kelihatan profesional di GitHub.
-
----
-
-```markdown
 # ♻️ ResikApp
 
 **ResikApp** adalah aplikasi mobile yang memudahkan pengguna untuk melakukan **order penjemputan sampah** serta dilengkapi dengan **fitur AI** yang dapat mengklasifikasikan jenis sampah melalui **kamera (image classification)**.  
@@ -28,7 +23,7 @@ Aplikasi ini dikembangkan sebagai **Capstone Project Bangkit Academy 2024 (Path 
 ---
 
 ## 📂 Struktur Project (ringkas)
-```
+
 
 ResikApp/
 ├── app/
@@ -89,20 +84,13 @@ ResikApp/
 ## 👨‍💻 Team Capstone Bangkit 2024
 
 * **Bayu Pratama Agus Kurniawan** – Mobile Development
-* **Ahlil Fikri** – Machine Learning
-* **(Tambahkan anggota lain sesuai tim)**
+* **Ahlil Fikri** – Mobile Development
+* **Ade Dwi** - Machine Learning
+*  **Anisa** - Machine Learning
+* **Stalin** - Machine Learning
+* * **Kathlen** - Machine Learning
 
----
 
-## 📜 Lisensi
 
-Proyek ini bersifat open-source dan tersedia di bawah lisensi [MIT](LICENSE).
 
-```
-
----
-
-Kalau mau lebih **powerful di LinkedIn / GitHub portfolio**, saya bisa tambahin bagian **"Impact"** (misalnya jumlah kelas data yang dipakai, performa model AI, atau hasil uji coba user).  
-
-Mau saya tambahin bagian itu juga biar lebih menunjukkan kualitas AI dan aplikasi kamu?
 ```
