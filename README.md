@@ -42,17 +42,22 @@ ResikApp/
 ````
 
 ---
-````
+
 
 ---
 ## 🚀 Cara Menjalankan
 
 1. **Clone repository**
+````
+
+---
    ```bash
    git clone https://github.com/ahlilfikri/ResikApp.git
 ````
 ````
+````
 
+---
 ---
 
 2. **Buka project di Android Studio**
