@@ -42,7 +42,9 @@ ResikApp/
 ````
 
 ---
+````
 
+---
 ## 🚀 Cara Menjalankan
 
 1. **Clone repository**
