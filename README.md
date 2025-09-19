@@ -51,6 +51,9 @@ ResikApp/
    ```bash
    git clone https://github.com/ahlilfikri/ResikApp.git
 ````
+````
+
+---
 
 2. **Buka project di Android Studio**
 
@@ -72,11 +75,11 @@ ResikApp/
 
 ### 🏠 Edukasi
 
-![Dashboard](images/education.png)
+![Dashboard](images/edukasi.png)
 
 ### 📸 Scan Sampah
 
-![Scan](clasifikasi/scan.png)
+![Scan](images/clasifikasi.png)
 
 
 ### 🚛 Order Penjemputan
@@ -98,7 +101,7 @@ ResikApp/
 * **Ade Dwi** - Machine Learning
 *  **Anisa** - Machine Learning
 * **Stalin** - Machine Learning
-* * **Kathlen** - Machine Learning
+*  **Kathlen** - Machine Learning
 
 
 
